@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programa de Practicantes | BanBif</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="topbar">
+    <a class="brand" href="#inicio">BanB<span>i</span>f</a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#programa">Programa</a>
+      <a href="#areas">Áreas</a>
+      <a href="#vacantes">Vacantes</a>
+    </nav>
+    <a class="nav-cta" href="#registro">Postula aquí</a>
+  </header>
+
+  <main>
+    <!-- HERO SECCIÓN BANNER -->
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <h1>Impulsa<br><em>tu futuro</em><br>con BanBif</h1>
+        <p>Conecta con oportunidades reales, proyectos retadores y un equipo que cree en tu potencial.</p>
+        <div class="hero-buttons">
+          <a class="btn lime" href="#vacantes">Ver oportunidades →</a>
+          <a class="btn outline" href="#registro">Deja tu CV</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="tagline">Personas que hacen que las cosas pasen</p>
+      </div>
+    </section>
+
+    <!-- VENTAJAS / POR QUÉ SER PRACTICANTE -->
+    <section class="benefits" id="programa">
+      <h2>¿Por qué ser practicante en BanBif?</h2>
+      <p class="sub">Te damos las herramientas para que llegues tan lejos como quieras.</p>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <div class="icon">🚀</div>
+          <h3>Aprendizaje constante</h3>
+          <p>Participa en proyectos reales desde el primer día.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="icon">👥</div>
+          <h3>Acompañamiento</h3>
+          <p>Cuenta con el apoyo de líderes que creen en tu talento.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="icon">💡</div>
+          <h3>Innovación con propósito</h3>
+          <p>Sé parte de un banco que impulsa el cambio.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="icon">🏠</div>
+          <h3>Modalidad flexible</h3>
+          <p>Equilibra tu vida personal y profesional.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ÁREAS -->
+    <section class="areas" id="areas">
+      <h2>Áreas donde puedes desarrollarte</h2>
+      <div class="area-grid">
+        <div class="area-item">💻 Tecnología</div>
+        <div class="area-item">📊 Data & Analytics</div>
+        <div class="area-item">💰 Finanzas</div>
+        <div class="area-item">👥 Gestión Humana</div>
+        <div class="area-item">🛡️ Riesgos</div>
+        <div class="area-item">⚙️ Operaciones</div>
+        <div class="area-item">🏦 Banca Comercial</div>
+        <div class="area-item">📣 Marketing</div>
+      </div>
+    </section>
+
+    <!-- VACANTES -->
+    <section class="vacancies" id="vacantes">
+      <h2>Vacantes destacadas</h2>
+      <div class="vacancy-grid">
+        <article class="vacancy-card">
+          <h3>Practicante de Productividad</h3>
+          <p>📍 Lima | Híbrido</p>
+          <small>Área: Operaciones</small>
+          <a class="btn-postular" href="#registro">Postular →</a>
+        </article>
+        <article class="vacancy-card">
+          <h3>Practicante de Análisis de Datos</h3>
+          <p>📍 Lima | Híbrido</p>
+          <small>Área: Finanzas</small>
+          <a class="btn-postular" href="#registro">Postular →</a>
+        </article>
+        <article class="vacancy-card">
+          <h3>Practicante de Talento y Cultura</h3>
+          <p>📍 Lima | Híbrido</p>
+          <small>Área: Gestión Humana</small>
+          <a class="btn-postular" href="#registro">Postular →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE REGISTRO (CONEXIÓN AUTOMATE) -->
+    <section class="register" id="registro">
+      <h2>¿Listo para dar el primer paso?</h2>
+      <p>Déjanos tus datos para considerar tu perfil en las convocatorias.</p>
+      
+      <form id="talent-form">
+        <div class="form-row">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo *" required>
+          <input type="text" id="dni" name="dni" placeholder="DNI *" maxlength="8" required>
+        </div>
+        <div class="form-row">
+          <input type="email" id="correo" name="correo" placeholder="Correo electrónico *" required>
+          <input type="tel" id="celular" name="celular" placeholder="Celular *" required>
+        </div>
+        <div class="form-row">
+          <select id="universidad" name="universidad" required>
+            <option value="">Selecciona Universidad...</option>
+            <option value="Universidad del Pacífico">Universidad del Pacífico</option>
+            <option value="PUCP">PUCP</option>
+            <option value="Universidad de Lima">Universidad de Lima</option>
+            <option value="UPC">UPC</option>
+            <option value="Otra">Otra</option>
+          </select>
+          <select id="carrera" name="carrera" required>
+            <option value="">Selecciona Carrera...</option>
+            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+            <option value="Administración">Administración</option>
+            <option value="Economía">Economía</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Otra">Otra</option>
+          </select>
+        </div>
+        <button type="submit" class="btn submit">🚀 Registrarme</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 BanBif. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
