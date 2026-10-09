@@ -11,9 +11,11 @@
 </head>
 <body>
 
-  <!-- ENCABEZADO -->
+  <!-- ENCABEZADO CON LOGO -->
   <header class="topbar">
-    <a class="brand" href="#inicio">BanB<span>i</span>f</a>
+    <a class="brand" href="#inicio">
+      <span class="logo-box">BanB<span class="dot">°</span>if</span>
+    </a>
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#programa">Programa</a>
@@ -107,43 +109,131 @@
       </div>
     </section>
 
-    <!-- FORMULARIO DE REGISTRO (CONEXIÓN AUTOMATE) -->
-    <section class="register" id="registro">
-      <h2>¿Listo para dar el primer paso?</h2>
-      <p>Déjanos tus datos para considerar tu perfil en las convocatorias.</p>
-      
-      <form id="talent-form">
-        <div class="form-row">
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo *" required>
-          <input type="text" id="dni" name="dni" placeholder="DNI *" maxlength="8" required>
-        </div>
-        <div class="form-row">
-          <input type="email" id="correo" name="correo" placeholder="Correo electrónico *" required>
-          <input type="tel" id="celular" name="celular" placeholder="Celular *" required>
-        </div>
-        <div class="form-row">
-          <select id="universidad" name="universidad" required>
-            <option value="">Selecciona Universidad...</option>
-            <option value="Universidad del Pacífico">Universidad del Pacífico</option>
-            <option value="PUCP">PUCP</option>
-            <option value="Universidad de Lima">Universidad de Lima</option>
-            <option value="UPC">UPC</option>
-            <option value="Otra">Otra</option>
-          </select>
-          <select id="carrera" name="carrera" required>
-            <option value="">Selecciona Carrera...</option>
-            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
-            <option value="Administración">Administración</option>
-            <option value="Economía">Economía</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Otra">Otra</option>
-          </select>
-        </div>
-        <button type="submit" class="btn submit">🚀 Registrarme</button>
-        <p id="form-status" class="form-status"></p>
-      </form>
+    <!-- FORMULARIO DE REGISTRO FIEL A LA IMAGEN -->
+    <section class="register-section" id="registro">
+      <div class="register-card">
+        <h2>Únete a nuestra base de talento</h2>
+        <p class="subtitle">Déjanos tus datos para recibir información sobre prácticas y convocatorias.</p>
+
+        <form id="talent-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombres y Apellidos *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required>
+            </div>
+            <div class="form-group">
+              <label for="dni">DNI / Documento de Identidad *</label>
+              <input type="text" id="dni" name="dni" placeholder="Ej. 76543210" maxlength="12" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="universidad">Universidad *</label>
+            <select id="universidad" name="universidad" required>
+              <option value="">Selecciona Universidad...</option>
+              <option value="Universidad del Pacífico">Universidad del Pacífico</option>
+              <option value="PUCP">Pontificia Universidad Católica del Perú</option>
+              <option value="Universidad de Lima">Universidad de Lima</option>
+              <option value="UPC">Universidad Peruana de Ciencias Aplicadas</option>
+              <option value="Otra">Otra Universidad</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="carrera">Carrera *</label>
+              <select id="carrera" name="carrera" required>
+                <option value="">Selecciona Carrera...</option>
+                <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                <option value="Administración">Administración</option>
+                <option value="Economía">Economía</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Otra">Otra</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ciclo">Ciclo *</label>
+              <select id="ciclo" name="ciclo" required>
+                <option value="">Selecciona Ciclo...</option>
+                <option value="5to Ciclo">5.º ciclo</option>
+                <option value="6to Ciclo">6.º ciclo</option>
+                <option value="7mo Ciclo">7.º ciclo</option>
+                <option value="8vo Ciclo">8.º ciclo</option>
+                <option value="9no Ciclo">9.º ciclo</option>
+                <option value="10mo Ciclo">10.º ciclo</option>
+                <option value="Egresado">Egresado/a</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="area">Área de Interés en BanBif *</label>
+            <select id="area" name="area" required>
+              <option value="">Selecciona Área de Interés...</option>
+              <option value="Tecnología">Tecnología</option>
+              <option value="Data & Analytics">Data & Analytics</option>
+              <option value="Finanzas">Finanzas</option>
+              <option value="Gestión Humana">Gestión Humana</option>
+              <option value="Riesgos">Riesgos</option>
+              <option value="Operaciones">Operaciones</option>
+              <option value="Banca Comercial">Banca Comercial</option>
+              <option value="Marketing">Marketing</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="correo">Correo Electrónico *</label>
+              <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+            </div>
+            <div class="form-group">
+              <label for="celular">Celular *</label>
+              <input type="tel" id="celular" name="celular" placeholder="987654321" maxlength="9" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="disponibilidad">Disponibilidad de Horario (30h semanales) *</label>
+            <textarea id="disponibilidad" name="disponibilidad" rows="2" placeholder="Ej. Mañanas libres de 8am a 2pm" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cv">Adjunta tu CV <span class="optional">(Opcional)</span></label>
+              <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+            </div>
+            <div class="form-group">
+              <label for="horario">Adjunta tu Horario <span class="optional">(Opcional)</span></label>
+              <input type="file" id="horario" name="horario" accept=".pdf,.png,.jpg,.jpeg">
+            </div>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="leyData" name="leyData" required>
+            <label for="leyData">
+              Acepto el tratamiento de mis datos personales (<a href="#" id="openModal">Ley N° 29733</a>).
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit">🚀 Registrarme</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
+      </div>
     </section>
   </main>
+
+  <!-- MODAL LEY DE PROTECCIÓN DE DATOS (LEY N° 29733) -->
+  <div id="lawModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Política de Protección de Datos Personales</h3>
+      <p><strong>Ley N° 29733 - Ley de Protección de Datos Personales de Perú</strong></p>
+      <p>En cumplimiento con lo establecido en la Ley N° 29733 y su Reglamento, BanBif informa al postulante que los datos personales que proporcione a través de este formulario serán incorporados a nuestro banco de datos de gestión de talento y reclutamiento.</p>
+      <p><strong>Finalidad:</strong> Evaluar tu perfil académico y profesional para participar en nuestros procesos de selección de prácticas preprofesionales y profesionales.</p>
+      <p><strong>Derechos ARCO:</strong> Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, cancelación y oposición respecto a tus datos personales mediante una solicitud dirigida a BanBif.</p>
+      <button class="btn-modal-close" id="acceptLaw">Entendido y Acepto</button>
+    </div>
+  </div>
 
   <footer>
     <p>© 2026 BanBif. Todos los derechos reservados.</p>
